@@ -3,5 +3,9 @@ document.addEventListener('DOMContentLoaded', event => {
 
 	button.addEventListener('click', async() => {
 		console.log("click")
+		
+		navigator.usb.requestDevice({filters:[]}).then(function(device){
+			console.log(device);
+		});
 	})
 })
