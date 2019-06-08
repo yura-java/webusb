@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', event => {
 			
 			let deviceId = [ device.manufacturerName, device.productId, device.productName, device.serialNumber, device.vendorId ];
 			devices[deviceId] = device;
+			
+			rerenderList(devices);
 		});
 	})
 })
