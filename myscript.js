@@ -1,7 +1,7 @@
 function rerenderList(devices) {
 	let list = document.getElementById('devices_list')
 	removeChildren(list)
-	for (device in Object.values(devices)) {
+	for (const device of Object.values(devices)) {
 		let deviceNode = document.createElement('li')
 		deviceNode.innerHTML = "<b>Device:</b> " + device.manufacturerName + " " + device.productName;
 		list.appendChild(deviceNode)
